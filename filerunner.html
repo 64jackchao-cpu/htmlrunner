@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Runner</title>
+</head>
+<body>
+    <h1>HTML Runner</h1>
+    <form id="htmlForm">
+        <textarea id="htmlInput" rows="10" cols="50" placeholder="Enter your HTML code here..."></textarea><br>
+        <button type="submit">Run HTML</button>
+    </form>
+    <div id="output" style="border: 1px solid black; padding: 10px; margin-top: 10px;"></div>
+
+    <script>
+        document.getElementById('htmlForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const htmlCode = document.getElementById('htmlInput').value;
+            document.getElementById('output').innerHTML = htmlCode;
+        });
+    </script>
+</body>
+</html>
